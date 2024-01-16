@@ -157,13 +157,14 @@ app.post(
 );
 
 app.get("/logout", (req, res) => {
-  req.logout();
-  res.redirect("/");
+  req.logout((err) => {
+    if (err) {
+      console.error("Error during logout:", err);
+      return res.redirect("/");
+    }
+    res.redirect("/login");
+  });
 });
-
-// app.get("/profile", isAuthenticated, (req, res) => {
-//   res.render("profile", { user: req.user });
-// });
 
 // Start the server
 const PORT = 3333;
