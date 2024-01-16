@@ -1,0 +1,21 @@
+<div class="container mt-5">
+  <h2 class="text-center">Welcome to the Home Page</h2>
+
+  <!-- User Card -->
+  <div class="card mb-3 small-card">
+    <!-- Added small-card class -->
+    <div class="card-body">
+      <h5 class="card-title">User Information</h5>
+      <p class="card-text">First Name: <%= user.first_name %></p>
+      <p class="card-text">Last Name: <%= user.last_name %></p>
+      <p class="card-text">Username: <%= user.username %></p>
+    </div>
+  </div>
+
+  <!-- Logout Button -->
+  <a href="/logout">
+    <button type="submit" class="btn btn-danger">Logout</button>
+  </a>
+
+  <!-- Add other content or features of the homepage as needed -->
+</div>
